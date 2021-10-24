@@ -1,0 +1,42 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+nav.menu {
+    font-size: 20px;
+    text-align: center;
+    padding: 4px; /* Значение полей */
+}
+
+nav.menu li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 5px; /* Отступ слева */
+    border: 2px solid #000000; /* Рамка вокруг текста */
+    padding: 3px; /* Поля вокруг текста */
+}
+
+.img1 {
+    height: 50px;
+    width: 50px;
+}
+
+.img2 {
+    height: 300px;
+    width: 200px;
+    box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.5);
+}
+
+.site_name {
+    text-align: center;
+}
+
+article {
+
+}
+
+hr {
+    border: none; /* Убираем границу */
+    background-color: #050505; /* Цвет линии */
+    height: 5px; /* Толщина линии */
+}
