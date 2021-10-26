@@ -31,12 +31,13 @@ nav.menu li {
     text-align: center;
 }
 
-article {
 
+h2 {
+    font-weight: 700;
 }
 
 hr {
     border: none; /* Убираем границу */
-    background-color: #050505; /* Цвет линии */
+    background-color: #000000; /* Цвет линии */
     height: 5px; /* Толщина линии */
 }
