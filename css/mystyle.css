@@ -1,6 +1,9 @@
-body {
+main{
+    margin-left: 50px;
     font-family: 'Times New Roman', serif;
     font-size: 18px;
+    line-height: normal;
+    text-transform: none;
 }
 
 nav.menu {
@@ -13,7 +16,7 @@ nav.menu li {
     display: inline; /* Отображать как строчный элемент */
     margin-right: 5px; /* Отступ слева */
     border: 2px solid #000000; /* Рамка вокруг текста */
-    padding: 3px; /* Поля вокруг текста */
+    padding: 8px; /* Поля вокруг текста */
 }
 
 .img1 {
@@ -36,8 +39,16 @@ h2 {
     font-weight: 700;
 }
 
+h4 {
+    text-decoration: underline;
+}
+
 hr {
     border: none; /* Убираем границу */
     background-color: #000000; /* Цвет линии */
     height: 5px; /* Толщина линии */
+}
+
+footer {
+    background: #ececec;
 }
