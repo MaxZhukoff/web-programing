@@ -1,4 +1,4 @@
-main{
+main {
     margin-left: 50px;
     font-family: 'Times New Roman', serif;
     font-size: 18px;
@@ -15,8 +15,6 @@ nav.menu {
 nav.menu li {
     display: inline; /* Отображать как строчный элемент */
     margin-right: 5px; /* Отступ слева */
-    border: 2px solid #000000; /* Рамка вокруг текста */
-    padding: 8px; /* Поля вокруг текста */
 }
 
 .img1 {
@@ -32,6 +30,7 @@ nav.menu li {
 
 .site_name {
     text-align: center;
+    padding: 10px; /* Поля вокруг текста */
 }
 
 
