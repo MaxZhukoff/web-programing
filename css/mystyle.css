@@ -44,6 +44,7 @@ h4 {
 }
 
 hr {
+    width: 100%;
     border: none; /* Убираем границу */
     background-color: #000000; /* Цвет линии */
     height: 5px; /* Толщина линии */
@@ -51,4 +52,5 @@ hr {
 
 footer {
     background: #ececec;
+    padding-left: 10px;
 }
