@@ -1,3 +1,13 @@
+body, html {
+    height: 100%;
+}
+
+.site_name {
+    background: #ececec;
+    text-align: center;
+    padding: 40px; /* Поля вокруг текста */
+}
+
 main {
     margin-left: 50px;
     font-family: 'Times New Roman', serif;
@@ -6,10 +16,11 @@ main {
     text-transform: none;
 }
 
-nav.menu {
+.menu {
+    white-space: nowrap;
     font-size: 20px;
-    text-align: center;
     padding: 4px;
+    font-weight: bold;
 }
 
 nav.menu li {
@@ -27,12 +38,6 @@ nav.menu li {
     width: 200px;
     box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.5);
 }
-
-.site_name {
-    text-align: center;
-    padding: 10px; /* Поля вокруг текста */
-}
-
 
 h2 {
     font-weight: 700;
