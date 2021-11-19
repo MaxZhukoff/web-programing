@@ -1,5 +1,10 @@
-body, html {
+html {
     height: 100%;
+}
+body {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 .site_name {
@@ -56,4 +61,42 @@ hr {
 footer {
     background: #ececec;
     padding-left: 10px;
+}
+
+.doctors {
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+.doctors > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(247px, 1fr));
+    grid-gap: 25px;
+    list-style-type: none;
+}
+
+.doctors > ul > li > figure {
+    max-height: 500px;
+    overflow: hidden;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    position: relative;
+}
+
+.doctors > ul > li > figure > img {
+    width: 100%;
+}
+
+.doctors > ul > li > figure > figcaption {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+}
+
+.doctors > ul > li > figure > figcaption > h3 {
+    color: white;
+    padding: 8px;
+    font-size: 17px;
+    text-align: center;
 }
