@@ -138,10 +138,10 @@
                 <li><p class="card-text">Маммопластика<a class="text-muted" style="float: right">от 3000$</a></p></li>
                 <li><p class="card-text">Пластика лица и шеи<a class="text-muted" style="float: right">от 3500$</a></p></li>
             </ul>
-            <div class="text-center"><a href="#" class="btn btn-primary">Записаться</a></div>
+            <div class="text-center"><a href="sign_up_for_an_appointment.html" class="btn btn-primary">Записаться</a></div>
         </div>
     </div>
-    <div class="card mx-auto w-auto" style="max-width: 30rem;">
+    <div class="card mx-auto" style="max-width: 30rem;">
         <div class="card-header text-center">
             Консультации врача-нарколога
         </div>
@@ -150,7 +150,7 @@
                 <li><p class="card-text">Первичная консультация<a class="text-muted" style="float: right">1000$</a></p></li>
                 <li><p class="card-text">Повторная консультация<a class="text-muted" style="float: right">500$</a></p></li>
             </ul>
-            <div class="text-center"><a href="#" class="btn btn-primary">Записаться</a></div>
+            <div class="text-center"><a href="sign_up_for_an_appointment.html" class="btn btn-primary">Записаться</a></div>
         </div>
     </div>
     <div class="card mx-auto" style="width: 30rem;">
@@ -161,7 +161,7 @@
             <ul>
                 <li><p class="card-text">Профилактическая и экстренная иммунопрофилактика<a class="text-muted" style="float: right">1000$</a></p></li>
             </ul>
-            <div class="text-center"><a href="#" class="btn btn-primary">Записаться</a></div>
+            <div class="text-center"><a href="sign_up_for_an_appointment.html" class="btn btn-primary">Записаться</a></div>
         </div>
     </div>
 </main>
@@ -177,7 +177,11 @@
         <li><a href="https://vk.com/zhukov.maksim">VK</a></li>
         <li><a href="https://t.me/max_zhukoff">TELEGRAM</a></li>
     </ul>
-    <script>document.write("Время загрузки страницы: " + loadTime + "c")</script>
+    <!--    <script>document.write("Время загрузки страницы: " + loadTime + "c")</script>-->
+    <script>
+        window.addEventListener("load", () => document.getElementById("demo").innerText = "Время загрузки страницы: " + loadTime + "c")
+    </script>
+    <p id="demo">Время загрузки страницы:</p>
 </footer>
 </body>
 </html>

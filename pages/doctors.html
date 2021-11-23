@@ -334,7 +334,11 @@
         <li><a href="https://vk.com/zhukov.maksim">VK</a></li>
         <li><a href="https://t.me/max_zhukoff">TELEGRAM</a></li>
     </ul>
-    <script>document.write("Время загрузки страницы: " + loadTime + "c")</script>
+    <!--    <script>document.write("Время загрузки страницы: " + loadTime + "c")</script>-->
+    <script>
+        window.addEventListener("load", () => document.getElementById("demo").innerText = "Время загрузки страницы: " + loadTime + "c")
+    </script>
+    <p id="demo">Время загрузки страницы:</p>
 </footer>
 </body>
 </html>

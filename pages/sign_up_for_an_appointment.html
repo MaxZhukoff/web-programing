@@ -6,9 +6,9 @@
     <meta name="keywords" content="поликлиника, больница, клиника, записаться к врачу">
     <meta name="description"
           content="Самая прогрессивная клиника с современным оборудованием. Здесь вам окажут профессиональную помощь лучшие врачи мира.">
-    <script defer src="../js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../css/mystyle.css">
     <script src="../js/script.js"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -127,6 +127,54 @@
     <hr/>
 </header>
 <main>
+    <h2 class = "text-center p-3">Запись на приём:</h2>
+    <div class="container col-lg-6">
+        <form>
+            <div class="mb-3">
+                <label for="first_name" class="form-label">Имя:</label>
+                <input type="text" class="form-control" id="first_name" name="user_name">
+            </div>
+            <div class="mb-3">
+                <label for="surname" class="form-label">Фамилия:</label>
+                <input type="text" class="form-control" id="surname" name="user_name">
+            </div>
+            <div class="mb-3">
+                <label for="middle_name" class="form-label">Отчество:</label>
+                <input type="text" class="form-control" id="middle_name" name="user_name">
+            </div>
+            <div class="mb-3">
+                <label for="phone_number" class="form-label">Номер телефона:</label>
+                <input type="number" class="form-control" id="phone_number" placeholder="+79007775050">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Выберите врача:</label>
+                <select class="form-select" id="doctor_sel" aria-label="Default select example">
+                    <option value="Орсон Фортун">Орсон Фортун - онколог</option>
+                    <option value="Деккард Шоу">Деккард Шоу - онколог</option>
+                    <option value="Джонас Тейлор">Джонас Тейлор - онколог</option>
+                    <option value="Артур Бишоп">Артур Бишоп - онкологг</option>
+                    <option value="Рик Форд">Рик Форд - нарколог</option>
+                    <option value="Ник Эскаланте">Ник Эскаланте - нарколог</option>
+                    <option value="Ли Кристмас">Ли Кристмас - хирург</option>
+                    <option value="Фил Брокер">Фил Брокер - хирург</option>
+                    <option value="Джоуи Джонс">Джоуи Джонс - невролог</option>
+                    <option value="Люк Райт">Люк Райт - невролог</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="date1" class="form-label">Дата записи:</label>
+                <input class="form-control" type="datetime-local" id="date1" name="trip-start"
+                       min="2021-11-22" max="2022-01-01">
+            </div>
+            <button type="submit" id="comment-add" class="btn btn-primary">Записаться</button>
+        </form>
+    </div>
+
+    <h2 class = "text-center p-3">Ваша запись:</h2>
+    <div class="container col-lg-6">
+        <div id="comment-field"></div>
+    </div>
+
 </main>
 <footer class="border border-dark">
     <p>
@@ -140,7 +188,12 @@
         <li><a href="https://vk.com/zhukov.maksim">VK</a></li>
         <li><a href="https://t.me/max_zhukoff">TELEGRAM</a></li>
     </ul>
-    <script>document.write("Время загрузки страницы: " + loadTime + "c")</script>
+    <!--    <script>document.write("Время загрузки страницы: " + loadTime + "c")</script>-->
+    <script>
+        window.addEventListener("load", () => document.getElementById("demo").innerText = "Время загрузки страницы: " + loadTime + "c")
+    </script>
+    <p id="demo">Время загрузки страницы:</p>
 </footer>
+<script src="../js/form.js"></script>
 </body>
 </html>
