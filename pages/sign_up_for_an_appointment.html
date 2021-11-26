@@ -116,7 +116,7 @@
                                     <label class="form-check-label" for="check1">Я согласен с политикой
                                         конфиденциальности</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Регистрация</button>
+                                <button type='button' class="btn btn-primary">Регистрация</button>
                             </form>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
 <main>
     <h2 class = "text-center p-3">Запись на приём:</h2>
     <div class="container col-lg-6">
-        <form>
+        <form onsubmit="return false;">
             <div class="mb-3">
                 <label for="first_name" class="form-label">Имя:</label>
                 <input type="text" class="form-control" id="first_name" name="user_name">
@@ -166,7 +166,7 @@
                 <input class="form-control" type="datetime-local" id="date1" name="trip-start"
                        min="2021-11-22" max="2022-01-01">
             </div>
-            <button type="submit" id="comment-add" class="btn btn-primary">Записаться</button>
+            <button id="comment-add" class="btn btn-primary">Записаться</button>
         </form>
     </div>
 

@@ -15,6 +15,7 @@ function showAppointment() {
 }
 
 document.getElementById("comment-add").addEventListener('click', function(event) {
+    event.defaultPrevented;
     let appointment = {
         first_name: document.getElementById('first_name').value,
         surname: document.getElementById('surname').value,
@@ -23,5 +24,6 @@ document.getElementById("comment-add").addEventListener('click', function(event)
         date: document.getElementById('date1').value,
         doctor: document.getElementById('doctor_sel').value
     }
-    localStorage.setItem('appoint', JSON.stringify(appointment))
+    localStorage.setItem('appoint', JSON.stringify(appointment));
+    showAppointment();
 });
