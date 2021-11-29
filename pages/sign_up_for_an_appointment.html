@@ -127,7 +127,7 @@
     <hr/>
 </header>
 <main>
-    <h2 class = "text-center p-3">Запись на приём:</h2>
+    <h2 class="text-center p-3">Запись на приём:</h2>
     <div class="container col-lg-6">
         <form onsubmit="return false;">
             <div class="mb-3">
@@ -166,13 +166,65 @@
                 <input class="form-control" type="datetime-local" id="date1" name="trip-start"
                        min="2021-11-22" max="2022-01-01">
             </div>
-            <button id="comment-add" class="btn btn-primary">Записаться</button>
+            <button id="appointment_add" class="btn btn-primary">Записаться</button>
         </form>
     </div>
 
-    <h2 class = "text-center p-3">Ваша запись:</h2>
     <div class="container col-lg-6">
-        <div id="comment-field"></div>
+        <h2 class="text-center p-4">Записи:</h2>
+        <form onsubmit="return false;" id="delete">
+            <ul style="list-style-type: none;padding: unset;">
+                <li>
+                    <div class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="check_first_name">
+                        <label class="form-check-label" for="check_first_name">Показать имя</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group form-switch">
+                        <input type="checkbox" class="form-check-input" id="check_surname">
+                        <label class="form-check-label" for="check_surname">Показать фамилию</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group form-switch">
+                        <input type="checkbox" class="form-check-input" id="check_middle_name">
+                        <label class="form-check-label" for="check_middle_name">Показать отчество</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group form-switch">
+                        <input type="checkbox" class="form-check-input" id="check_phone_number">
+                        <label class="form-check-label" for="check_phone_number">Показать номер телефона</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group form-switch">
+                        <input type="checkbox" class="form-check-input" id="check_date">
+                        <label class="form-check-label" for="check_date">Показать время записи</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-group form-switch">
+                        <input type="checkbox" class="form-check-input" id="check_doctor">
+                        <label class="form-check-label" for="check_doctor">Показать врача</label>
+                    </div>
+                </li>
+            </ul>
+            <button class="btn btn-primary" style="margin-bottom: 10px" id="table_add">Показать таблицу</button>
+        </form>
+        <div class="container col-12">
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead class="thead-dark">
+                    <tr class="table-dark" id="columnsTable_field">
+                    </tr>
+                    </thead>
+                    <tbody id="appointments_field">
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 
 </main>
