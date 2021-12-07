@@ -30,7 +30,7 @@ function showAppointment() {
 }
 
 document.getElementById("table_add").addEventListener('click', function (event) {
-    event.defaultPrevented;
+    event.preventDefault();
     if (document.getElementById('check_first_name').checked)
         check_first_name = true;
     if (document.getElementById('check_surname').checked)
