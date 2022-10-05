@@ -1,0 +1,22 @@
+extends layout/main
+
+block content
+    script(src='https://cdn.socket.io/4.5.0/socket.io.js')
+    script(src='js/websocket_addAppointment.js')
+    h2.text-center.p-3 Запись на приём:
+    .container.col-lg-6
+        form(onsubmit='return false;')
+            .mb-3
+                label.form-label Выберите врача:
+                select#doctor_sel.form-select(aria-label='Default select example')
+            .mb-3
+                label.form-label Выберите услугу:
+                select#service_sel.form-select(aria-label='Default select example')
+            .mb-3
+                label.form-label(for='date1') Дата записи:
+                input#date1.form-control(type='datetime-local' name='trip-start')
+            button#appointment_add.btn.btn-primary Записаться
+block scripts
+    script(src='../js/form.js')
+    script.
+      loadDoctors();

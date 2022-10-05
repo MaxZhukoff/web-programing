@@ -1,0 +1,48 @@
+script(src='https://cdn.socket.io/4.5.0/socket.io.js')
+script(src='js/websocket_addAppointment.js')
+script(src='js/websocket_updateAppointment.js')
+h2.text-center.p-3 Ваши персональные данные
+.container.col-6
+    table.table.table-striped
+        tbody
+            tr
+                td(colspan='1') ID аккаунта
+                td#id_lk
+            tr
+                td(colspan='1') ФИО
+                td#name_lk
+            tr
+                td(colspan='1') Email
+                td#email_lk
+            tr
+                td(colspan='1') Специальность
+                td#spec_lk
+h2.text-center.p-3 Ативные записи к вам:
+.container.col-6
+    table.table
+        thead
+            tr
+                th(scope='col') Дата записи
+                th(scope='col') Имя пациента
+                th(scope='col') Услуга
+                th(scope='col') Диагноз
+                th(scope='col') Подтвердить диагноз
+        tbody#appointments_lk
+h2.text-center История:
+    a.btn.btn-light(data-bs-toggle='collapse' href='#collapseExample' role='button' aria-expanded='false' aria-controls='collapseExample')
+        | Показать историю
+#collapseExample.collapse
+    .card.card-body
+        .container.col-6
+            table.table
+                thead
+                    tr
+                        th(scope='col') Дата записи
+                        th(scope='col') Имя пациента
+                        th(scope='col') Услуга
+                        th(scope='col') Диагноз
+                tbody#appointmentsHistory_lk
+
+script(src='../js/lkDoctor.js')
+script.
+  getAppointmentsDoctorLK();

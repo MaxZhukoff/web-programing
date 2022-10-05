@@ -1,0 +1,120 @@
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.site_name {
+    background: #ececec;
+    text-align: center;
+    padding: 40px; /* Поля вокруг текста */
+}
+
+main {
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: normal;
+    text-transform: none;
+}
+
+.menu {
+    white-space: nowrap;
+    font-size: 20px;
+    padding: 4px;
+    font-weight: bold;
+}
+
+nav.menu li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 5px; /* Отступ слева */
+}
+
+.img1 {
+    height: 50px;
+    width: 50px;
+}
+
+.img2 {
+    height: 300px;
+    width: 200px;
+    box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.5);
+}
+
+
+h2 {
+    font-weight: 700;
+}
+
+h4 {
+    text-decoration: underline;
+}
+
+hr {
+    width: 100%;
+    border: none; /* Убираем границу */
+    background-color: #000000; /* Цвет линии */
+    height: 5px; /* Толщина линии */
+}
+
+footer {
+    background: #ececec;
+    padding-left: 10px;
+}
+
+.doctors {
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+.doctors > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(247px, 1fr));
+    grid-gap: 25px;
+    list-style-type: none;
+}
+
+.doctors > ul > li > figure {
+    max-height: 500px;
+    overflow: hidden;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    position: relative;
+}
+
+.doctors > ul > li > figure > img {
+    width: 100%;
+}
+
+.doctors > ul > li > figure > figcaption {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+}
+
+.doctors > ul > li > figure > figcaption > h3 {
+    color: white;
+    padding: 8px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.serviceCard {
+    width: 30rem;
+    max-width: 30rem;
+}
+
+.leftstr {
+    margin: 0;
+    float: left; /* Обтекание справа */
+    width: 80%; /* Ширина текстового блока */
+}
+.rightstr {
+    margin: 0;
+    width: 20%;
+    float: right;
+    text-align: right; /* Выравнивание по правому краю */
+}

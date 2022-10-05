@@ -1,0 +1,76 @@
+extends layout/main
+
+block content
+    #carouselExampleControls.carousel.slide(data-bs-ride='carousel')
+        .carousel-inner
+            .carousel-item.active
+                img.d-block.w-100(src='../pictures/slider01.jpg' alt='...')
+            .carousel-item
+                img.d-block.w-100(src='../pictures/slider02.jpg' alt='...')
+            .carousel-item
+                img.d-block.w-100(src='../pictures/slider03.jpg' alt='...')
+            .carousel-item
+                img.d-block.w-100(src='../pictures/slider04.jpg' alt='...')
+            .carousel-item
+                img.d-block.w-100(src='../pictures/slider05.jpg' alt='...')
+            .carousel-item
+                img.d-block.w-100(src='../pictures/slider06.jpg' alt='...')
+        button.carousel-control-prev(type='button' data-bs-target='#carouselExampleControls' data-bs-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.visually-hidden Previous
+        button.carousel-control-next(type='button' data-bs-target='#carouselExampleControls' data-bs-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.visually-hidden Next
+    h1.text-center.p-4 Наши врачи:
+    .container
+        h2.text-center Врачи-онкологи:
+        .row
+            .row
+                .col-12.col-lg-3.col-md-4.col-sm-6
+                    img.img-fluid.img-thumbnail(src='../pictures/doctor1.png' alt='...')
+                    p.text-center Орсон Фортун
+                .col-12.col-lg-3.col-md-4.col-sm-6
+                    img.img-fluid.img-thumbnail(src='../pictures/doctor2.png' alt='...')
+                    p.text-center Деккард Шоу
+                .col-12.col-lg-3.col-md-4.col-sm-6
+                    img.img-fluid.img-thumbnail(src='../pictures/doctor3.png' alt='...')
+                    p.text-center Джонас Тейлор
+                .col-12.col-lg-3.col-md-4.col-sm-6
+                    img.img-fluid.img-thumbnail(src='../pictures/doctor4.jpg' alt='...')
+                    p.text-center Артур Бишоп
+        .container
+            h2.text-center Врачи-наркологи:
+            .row
+                .col-12.col-lg-3.col-md-4.col-sm-6
+                    img.img-fluid.img-thumbnail(src='../pictures/doctor5.png' alt='...')
+                    p.text-center Рик Форд
+                .col-12.col-lg-3.col-md-4.col-sm-6
+                    img.img-fluid.img-thumbnail(src='../pictures/doctor6.jpg' alt='...')
+                    p.text-center Ник Эскаланте
+        .container
+            h2.text-center Врачи-хирурги:
+            .row
+                .col-12.col-lg-3.col-md-4.col-sm-6
+                    img.img-fluid.img-thumbnail(src='../pictures/doctor7.png' alt='...')
+                    p.text-center Ли Кристмас
+                .col-12.col-lg-3.col-md-4.col-sm-6
+                    img.img-fluid.img-thumbnail(src='../pictures/doctor8.png' alt='...')
+                    p.text-center Фил Брокер
+        .container
+            h2.text-center Врачи-неврологи:
+            .row
+                .col-12.col-lg-3.col-md-4.col-sm-6
+                    img.img-fluid.img-thumbnail(src='../pictures/doctor9.png' alt='...')
+                    p.text-center Джоуи Джонс
+                .col-12.col-lg-3.col-md-4.col-sm-6
+                    img.img-fluid.img-thumbnail(src='../pictures/doctor10.png' alt='...')
+                    p.text-center Люк Райт
+        .container
+            h2.text-center Врачи-санитары:
+            .row
+                .col-12.col-lg-6.col-md-6.col-sm-12
+                    img.img-thumbnail(src='../pictures/doctor11.jpg' alt='...')
+                    p.text-center Санитар1
+                .col-12.col-lg-6.col-md-6.col-sm-12
+                    img.img-thumbnail(src='../pictures/doctor12.jpg' alt='...')
+                    p.text-center Санитар2

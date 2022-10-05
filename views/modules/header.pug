@@ -1,0 +1,81 @@
+header
+    h1.site_name
+        img.img1(src='../pictures/shapka.png')
+        | Клиника имени Джейсона Стэтхема
+    nav.navbar.navbar-expand-lg.navbar-light(style='background-color: #ffffff;')
+        .container-fluid
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarSupportedContent.justify-content-center.collapse.navbar-collapse
+                ul#menu.menu.navbar-nav.mb-5.mb-lg-0
+                    li.nav-item
+                        a.nav-link(aria-current='page' href='/') О нас
+                    li.nav-item
+                        a.nav-link(href='sign_up_for_an_appointment') Записаться на приём
+                    li.nav-item
+                        a.nav-link(href='timetable') Расписание приёма
+                    li.nav-item
+                        a.nav-link(href='doctors') Специалисты
+                    li.nav-item
+                        a.nav-link(href='Prices_and_services') Цены и услуги
+                    li#modal_user.nav-item
+                    li#modal_auth.nav-item.dropdown
+                        a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                            | Личный кабинет
+                        ul.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                            li
+                                a.dropdown-item.btn.btn-primary(data-bs-toggle='modal' data-bs-target='#authorization') Войти
+                            li
+                                a.dropdown-item.btn.btn-primary#loginGitHub Войти через GitHub
+                            li
+                                a.dropdown-item.btn.btn-primary(data-bs-toggle='modal' data-bs-target='#registration') Регистрация
+                    li#exit
+                #authorization.modal.fade(data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='authorizationLabel' aria-hidden='true')
+                    .modal-dialog
+                        .modal-content
+                            .modal-header
+                                h5#authorizationLabel.modal-title Авторизация
+                                button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                            .modal-body
+                                form(onsubmit='return false;')
+                                    .form-group
+                                        label(for='inputEmail') Email:
+                                        input#inputEmail.form-control(type='email')
+                                    .form-group
+                                        label(for='inputPassword') Пароль:
+                                        input#inputPassword.form-control(type='password')
+                                    .form-group.form-check
+                                        input#check.form-check-input(type='checkbox')
+                                        label.form-check-label(for='check') Запомнить меня
+                                    button#login.btn.btn-primary(syb) Войти
+                #registration.modal.fade(data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='registrationLabel' aria-hidden='true')
+                    .modal-dialog
+                        .modal-content
+                            .modal-header
+                                h5#registrationLabel.modal-title Регистрация
+                                button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                            .modal-body
+                                form(onsubmit='return false')
+                                    .form-group
+                                        label(for='inputEmailReg') Email:
+                                        input#inputEmailReg.form-control(type='email')
+                                    .form-group
+                                        label(for='inputNameReg') ФИО:
+                                        input#inputNameReg.form-control(type='name')
+                                    .form-group
+                                        label(for='inputPasswordReg') Пароль:
+                                        input#inputPasswordReg.form-control(type='password')
+                                    .form-group
+                                        label(for='inputPasswordCheckReg') Повторите пароль:
+                                        input#inputPasswordCheckReg.form-control(type='password')
+                                    .form-group.form-check
+                                        input#check1.form-check-input(type='checkbox')
+                                        label.form-check-label(for='check1')
+                                            | Я согласен с политикой
+                                            | конфиденциальности
+                                    button#reg.btn.btn-primary Регистрация
+    hr
+    script(src='../js/auth.js')
+    script(src='../js/createUser.js')
+    script.
+        menu();

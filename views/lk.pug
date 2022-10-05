@@ -1,0 +1,9 @@
+extends layout/main
+
+block content
+    if role === 'USER'
+        include ./modules/userLK
+    else if role === 'ADMIN'
+        include ./modules/adminLK
+    else if role === 'DOCTOR'
+        include ./modules/doctorLK

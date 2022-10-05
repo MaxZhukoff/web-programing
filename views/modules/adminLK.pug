@@ -1,0 +1,36 @@
+h2.text-center.p-3 Личный кабинет администратора
+.container.col-6
+    table.table.table-striped
+        tbody
+            tr
+                td(colspan='1') ID аккаунта
+                td#id_lk
+            tr
+                td(colspan='1') ФИО
+                td#name_lk
+            tr
+                td(colspan='1') Email
+                td#email_lk
+h2.text-center.p-3 Список врачей:
+.container.col-6
+    table.table
+        thead
+            tr
+                th(scope='col') ID
+                th(scope='col') Имя врача
+                th(scope='col') Выписать из врачей
+        tbody#appointments_lk
+
+h2.text-center.p-3 Добавить нового врача:
+form(onsubmit='return false')
+    .row.g-3.justify-content: center
+        .col-auto
+            input#inputSupertokensId.form-control(type='string' placeholder='Supertokens Id' style='max-width:50em;')
+        .col-auto
+            input#inputSpec.form-control(type='string' placeholder='Специальность' style='max-width:50em;')
+        .col-auto
+            button.btn.btn-primary.mb-3(type='submit' onclick='addDoctor()' style='margin:1px;') Добавить
+
+script(src='../js/lkAdmin.js')
+script.
+    loadDoctors();

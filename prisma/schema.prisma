@@ -1,0 +1,64 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            Int           @id @default(autoincrement())
+  supertokensID String        @unique
+  email         String        @unique
+  name          String?
+  role          Role
+  appointments  Appointment[]
+  Doctor        Doctor[]
+}
+
+enum Role {
+  USER
+  DOCTOR
+  ADMIN
+}
+
+model Doctor {
+  id                Int               @id @default(autoincrement())
+  user              User              @relation(fields: [userSupertokensID], references: [supertokensID], onDelete: Cascade)
+  userSupertokensID String            @unique
+  specialization    String
+  appointments      Appointment[]
+}
+
+model Service {
+  id                    Int             @id @default(autoincrement())
+  price                 Int
+  title                 String
+  doctorSpecialization  String?
+  category              ServiceCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  categoryId            Int
+  appointments          Appointment[]
+}
+
+model ServiceCategory {
+  id                    Int       @id @default(autoincrement())
+  title                 String
+  services              Service[]
+}
+
+model Appointment {
+  id         Int      @id @default(autoincrement())
+  date       DateTime
+  content    String?
+  visited    Boolean? @default(false)
+  doctor     Doctor   @relation(fields: [doctorId], references: [userSupertokensID], onDelete: Cascade)
+  doctorId   String
+  user       User     @relation(fields: [userId], references: [supertokensID], onDelete: Cascade)
+  userId     String
+  service    Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  serviceId  Int
+}

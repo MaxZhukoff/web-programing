@@ -1,0 +1,11 @@
+extends layout/main
+
+block content
+    h2.text-center.p-3 Цены и услуги
+    #loadName
+        img#preloader.rounded.mx-auto.d-block(src='../pictures/load.gif' style='height: 50px; width: 50px; margin: 2em;' alt='...')
+    div#services_container
+block scripts
+    script(src='../js/services.js')
+    script.
+      services();

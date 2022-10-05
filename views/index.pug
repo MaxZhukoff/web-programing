@@ -1,0 +1,26 @@
+extends layout/main
+
+block content
+    section
+        h2
+            | О нашей клинике:
+            p
+                img.img2(src='../pictures/Jason-Statham.jpg')
+        p
+            strong Клиника с прогрессивным подходом к лечению.
+        h4 Наши преимущества:
+        ul
+            li Высокие цены. Наши услуги только для богатых.
+            li Высочайший профессионализм наших врачей. Лучшие из лучших.
+            li Мы используем только новейшие технологии.
+    section
+        h2 Где мы находимся:
+        p Располагаемся в г. Санкт-Петербург, ул. Белорусская, д. 6, кв 710.
+        .hidden-md-up.xs(style='position:relative;overflow:hidden;')
+            a(href='https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps' style='color:#eee;font-size:12px;position:absolute;top:0px;') Санкт‑Петербург
+            a(href='https://yandex.ru/maps/2/saint-petersburg/house/belorusskaya_ulitsa_6/Z0kYcwdgSUQDQFtjfXVyd3lhZQ==/?ll=30.499692%2C59.936269&utm_medium=mapframe&utm_source=maps&z=18.09' style='color:#eee;font-size:12px;position:absolute;top:14px;') Белорусская улица, 6 — Яндекс.Карты
+            iframe(src='https://yandex.ru/map-widget/v1/-/CCUqjXt0gD' width='560' height='400' frameborder='1' allowfullscreen='true' style='position:relative;')
+    article
+        a(href='https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%B5%D0%B9%D1%82%D0%B5%D0%BC,_%D0%94%D0%B6%D0%B5%D0%B9%D1%81%D0%BE%D0%BD')
+            | Кто
+            | такой Джейсон Стетхем

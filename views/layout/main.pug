@@ -1,0 +1,16 @@
+doctype html
+head
+    title Клиника им. Джейсона Стэтхема
+    meta(charset='UTF-8')
+    meta(name='keywords' content='поликлиника, больница, клиника, записаться к врачу')
+    meta(name='description' content='Самая прогрессивная клиника с современным оборудованием. Здесь вам окажут профессиональную помощь лучшие врачи мира.')
+    include ../modules/scripts_and_styles
+body
+    if email !== ''
+        include ../modules/header_authorized
+    else
+        include ../modules/header
+    main
+        block content
+    include ../modules/footer
+    block scripts

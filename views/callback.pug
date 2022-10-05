@@ -1,0 +1,63 @@
+doctype html
+head
+  title Клиника им. Джейсона Стэтхема
+  meta(charset='UTF-8')
+  meta(name='keywords' content='поликлиника, больница, клиника, записаться к врачу')
+  meta(name='description' content='Самая прогрессивная клиника с современным оборудованием. Здесь вам окажут профессиональную помощь лучшие врачи мира.')
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous')
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous')
+body
+  div(style="position:absolute; width:100%; top:15%; text-align:center;")
+    .spinner-grow(role='status')
+      span.visually-hidden Loading...
+    .spinner-grow(role='status')
+      span.visually-hidden Loading...
+    .spinner-grow(role='status')
+      span.visually-hidden Loading...
+    .spinner-grow(role='status')
+      span.visually-hidden Loading...
+    .spinner-grow(role='status')
+      span.visually-hidden Loading...
+  script(src='https://cdn.jsdelivr.net/gh/supertokens/supertokens-website/bundle/bundle.js')
+  script.
+    window.addEventListener('load', async function(event) {
+      supertokens.init({
+        apiDomain: "http://localhost:3000",
+        apiBasePath: "/authapi"
+      });
+      let code = new URL(window.location.href).searchParams.get('code');
+      const response = await fetch("http://localhost:3000/authapi/signinup", {
+        method: "POST",
+        headers: {
+          "rid": "thirdpartyemailpassword",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          code,
+          redirectURI: "http://localhost:3000/callback/github",
+          thirdPartyId: "github"
+        })
+      }).then(response => response.json().then((response) => f(response)));
+    });
+    async function f(response) {
+      if (response.status !== "OK") {
+        alert(response.formFields[0]);
+        throw response.status;
+      } else if (response.createdNewUser) {
+        const dataRegisterDB = {
+          supertokensID: response.user.id,
+          email: response.user.email,
+          name: '',
+          role: "USER"
+        };
+        await fetch("/users", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json"
+                  },
+                  body: JSON.stringify(dataRegisterDB)
+                }
+        )
+      }
+      window.location.href = "/";
+    }
